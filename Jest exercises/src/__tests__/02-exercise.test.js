@@ -6,6 +6,7 @@ describe("02-exercises", () => {
     const hello = "hello-world";
 
     expect.assertions(1);
+    expect(hello).toBe('hello-world')
 
     // Finish the test
   });
@@ -13,14 +14,17 @@ describe("02-exercises", () => {
     const hello = "hello-world";
 
     expect.assertions(1);
+    expect(hello).not.toBe('hola-mundo')
 
     // Finish the test
   });
   test("user1 is the same as user2", () => {
     expect.assertions(1);
-
+    
     const user1 = { name: "ana", phone: 678876567 };
     const user2 = user1;
+
+    expect(user1).toBe(user2);
 
     // Finish the test
   });
@@ -29,6 +33,8 @@ describe("02-exercises", () => {
 
     const user1 = { name: "ana", phone: 678876567 };
     const user3 = { name: "ana", phone: 678876567 };
+
+    expect(user1).not.toBe(user3)
 
     // Finish the test
   });
