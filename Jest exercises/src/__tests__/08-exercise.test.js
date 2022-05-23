@@ -5,6 +5,7 @@ import { calculator, increment } from "../utils/math";
  */
 describe("08-exercises", () => {
   let addSpy = null;
+  //jest.spyOn(video, 'play');
 
   beforeAll(() => {
     // 1. Spy on the 'add' method of the calculator object
@@ -25,11 +26,11 @@ describe("08-exercises", () => {
     expect.assertions(2);
 
     // 3. Make an assertion that the addSpy has been called 1 time
-    expect(addSpy).toBeCAlledTimes(1)
+    expect(addSpy).toHaveBeenCalledTimes(1)
 
     // 4. Make an assertion that the addSpy has been called with the
     // numbers 4 and 5
-    expect(addSpy).toBeCAlledWith(4,5)
+    expect(addSpy).toHaveBeenCalledTimes(4,5)
 
   });
 });
